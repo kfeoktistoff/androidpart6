@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <EditText
+            android:id="@+id/newVideoName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"/>
+
+    <EditText
+            android:id="@+id/newVideoLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="URL"
+            android:layout_below="@id/newVideoName"/>
+
+    <EditText
+            android:id="@+id/newVideoDuration"
+            android:layout_width="match_parent"
+            android:inputType="number"
+            android:layout_height="wrap_content"
+            android:hint="Duration"
+            android:layout_below="@id/newVideoLink"/>
+    <Button
+            android:id="@+id/uploadNewVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/newVideoDuration"/>
+</RelativeLayout>

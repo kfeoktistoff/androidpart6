@@ -2,21 +2,23 @@ package org.magnum.mobilecloud.video.repository;
 
 import com.google.common.base.Objects;
 
-import javax.persistence.*;
-import java.util.Set;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 /**
  * A simple object to represent a video and its URL for viewing.
- * 
+ *
  * You probably need to, at a minimum, add some annotations to this
  * class.
- * 
+ *
  * You are free to add annotations, members, and methods to this
  * class. However, you probably should not change the existing
  * methods or member variables. If you do change them, you need
  * to make sure that they are serialized into JSON in a way that
  * matches what is expected by the auto-grader.
- * 
+ *
  * @author mitchell
  */
 @Entity
@@ -87,7 +89,7 @@ public class Video {
 	public long getLikes() {
 		return likes;
 	}
-	
+
 	public void setLikes(long likes) {
 		this.likes = likes;
 	}
@@ -103,7 +105,7 @@ public class Video {
     /**
 	 * Two Videos will generate the same hashcode if they have exactly the same
 	 * values for their name, url, and duration.
-	 * 
+	 *
 	 */
 	@Override
 	public int hashCode() {
@@ -114,7 +116,7 @@ public class Video {
 	/**
 	 * Two Videos are considered equal if they have exactly the same values for
 	 * their name, url, and duration.
-	 * 
+	 *
 	 */
 	@Override
 	public boolean equals(Object obj) {
